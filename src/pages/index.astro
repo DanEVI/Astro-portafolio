@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/badge.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<section class="flex w-full mx-auto lg:w-[850px] py-44">
+			<img class="w-72 h-72" src="persona-dev.png" alt="Daniel" />
+			<div class="flex flex-col justify-center">
+				<h1 class="text-white text-5xl font-bold flex justify-center flex-row">Hola, soy Daniel <div class="flex items-center ps-2"><Badge>Disponible para trabajar</Badge></div></h1>
+				<p class="text-white text-xl">Técnico en Diseño y Desarrollador web <br>Me gustaría especializarme en el desarrollo backend, enfocándome en resolver problemas de código y ayudando a otros en el proceso.</p>
+				<div class="flex flex-row">
+					<ul>
+						<li>
+							<SocialPill>
+								<LinkedIn 
+								href=""
+								class="w-6 h-6"/>
+								LinkedIn
+							</SocialPill>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+		</section>
+	</main>
+</Layout>
