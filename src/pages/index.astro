@@ -5,7 +5,8 @@ import SocialPill from "../components/SocialPill.astro";
 import LinkedIn from "../icons/LinkedIn.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Experience from "../components/Experience.astro";
-import ExperienceItem from "../components/ExperienceItem.astro";
+import GitHub from "../icons/GitHub.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Daniel Villavicencio | Diseño y desarrollo web">
@@ -13,28 +14,47 @@ import ExperienceItem from "../components/ExperienceItem.astro";
 		<SectionContainer id="top" class="py-44 pb-22">
 			<img class="w-72 h-72" src="persona-dev.png" alt="Daniel" />
 			<div class="flex flex-col justify-center">
-				<h1 class="text-white text-5xl font-bold flex justify-center flex-row">Hola, soy Daniel <div class="flex items-center ps-2"> <Badge>Disponible para trabajar</Badge></div></h1>
+				<h1
+					class="text-white text-5xl font-bold flex justify-center flex-row mb-4"
+				>
+					Hola, soy Daniel <div class="flex items-center ps-2">
+						<Badge>Disponible para trabajar</Badge>
+					</div>
+				</h1>
 				<p class="text-white text-xl">
-					Técnico en Diseño y Desarrollador web <br />Me gustaría
-					especializarme en el desarrollo backend, enfocándome en
-					resolver problemas de código y ayudando a otros en el
-					proceso.
+					Técnico en Diseño y Desarrollador web <br/>Orientado al trabajo colaborativo. Expecializado en desarrollar aplicaciones web.
 				</p>
 				<div class="flex flex-row">
-					<nav>
+					<nav class="flex gap-x-4">
 						<SocialPill>
-							<LinkedIn href="https://www.linkedin.com/in/danielvill/" class="w-6 h-6" />
+							<LinkedIn
+								href="https://www.linkedin.com/in/danielvill/"
+								class="w-6 h-6"
+							/>
 							LinkedIn
+						</SocialPill>
+						<SocialPill>
+							<GitHub
+								href="https://github.com/DanEVI"
+								class="w-6 h-6"
+							/>
+							Github
 						</SocialPill>
 					</nav>
 				</div>
 			</div>
 		</SectionContainer>
-		<Experience>
-			<ExperienceItem></ExperienceItem>
-		</Experience>
-		<SectionContainer id="proyectos">
-			<h2 class="text-white text-3xl font-bold flex justify-center flex-row">Proyectos</h2>
+		<SectionContainer class="flex-col">
+			<h2 class="text-4xl font-semibold mb-10">Experiencia Laboral</h2>
+			<Experience />
+		</SectionContainer>
+		<SectionContainer id="proyectos" class="flex-col py-44 pb-22">
+			<h2
+				class="text-4xl font-semibold mb-10"
+			>
+				Proyectos
+			</h2>
+			<Projects/>
 		</SectionContainer>
 	</main>
 </Layout>
